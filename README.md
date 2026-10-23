@@ -17,6 +17,8 @@ All previews show **2023**. Use the interactive maps above to select other years
 
 #### Full map (2023)
 
+The colour scale shows the MedStat region’s **Active Bypassing rate**: pale yellow indicates a low rate (near 0%), while darker blue indicates a higher rate (up to 100%). In the interactive map, select a year with the controls in the upper-right corner, use **+ / −** to zoom, and click a MedStat region to open its case-count, rate, BP/Non-BP, and travel-time summary.
+
 <img width="960" alt="Elective admissions: full bypassing map for 2023" src="https://github.com/user-attachments/assets/e79e4992-e2a5-4177-951b-8666501a5fe1" />
 
 #### GR26 selected (2023)
@@ -28,6 +30,8 @@ This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were 
 ### Urgent admissions
 
 #### Full map (2023)
+
+The colour scale shows the MedStat region’s **Active Bypassing rate**: pale yellow indicates a low rate (near 0%), while darker blue indicates a higher rate (up to 100%). In the interactive map, select a year with the controls in the upper-right corner, use **+ / −** to zoom, and click a MedStat region to open its case-count, rate, BP/Non-BP, and travel-time summary.
 
 <img width="960" alt="Urgent admissions: full bypassing map for 2023" src="https://github.com/user-attachments/assets/9b4735d6-ac93-4e15-9b09-4b3ddbce496f" />
 
