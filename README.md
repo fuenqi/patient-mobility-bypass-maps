@@ -11,13 +11,13 @@ Interactive maps and methodological documentation for a revealed-choice measure 
 
 ## Map previews
 
-### Elective admissions
-
-<img width="960" alt="Elective-admissions bypassing map preview" src="https://github.com/user-attachments/assets/f62c8f19-fb6e-486a-9038-9c11ac770eba" />
-
 ### Urgent admissions
 
-<img width="960" alt="Urgent-admissions bypassing map preview" src="https://github.com/user-attachments/assets/abd9094a-6bcf-45d5-9076-786f42553ca9" />
+<img width="960" alt="Urgent-admissions bypassing map preview" src="https://github.com/user-attachments/assets/f62c8f19-fb6e-486a-9038-9c11ac770eba" />
+
+### Elective admissions
+
+<img width="960" alt="Elective-admissions bypassing map preview" src="https://github.com/user-attachments/assets/abd9094a-6bcf-45d5-9076-786f42553ca9" />
 
 *The previews show the initial year. Use the year selector, zoom controls, and pop-ups in the interactive maps above.*
 
