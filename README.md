@@ -2,21 +2,38 @@
 
 Interactive maps and methodological documentation for a revealed-choice measure of cross-canton hospital bypassing in Switzerland.
 
-**Explore the maps:** [Elective admissions](docs/Map_Choropleth_Elective_Leaflet.html) · [Urgent admissions](docs/Map_Choropleth_Urgent_Leaflet.html)
+> **Open the interactive maps through GitHub Pages.** GitHub does not preview the source of large self-contained HTML files. This does **not** mean that a map is empty or missing.
+
+| Admission group | Interactive map |
+| --- | --- |
+| Elective admissions | [Open the interactive map](https://fuenqi.github.io/patient-mobility-bypass-maps/Map_Choropleth_Elective_Leaflet.html) |
+| Urgent admissions | [Open the interactive map](https://fuenqi.github.io/patient-mobility-bypass-maps/Map_Choropleth_Urgent_Leaflet.html) |
+
+## Map previews
+
+### Elective admissions
+
+<img width="960" alt="Elective-admissions bypassing map preview" src="https://github.com/user-attachments/assets/f62c8f19-fb6e-486a-9038-9c11ac770eba" />
+
+### Urgent admissions
+
+<img width="960" alt="Urgent-admissions bypassing map preview" src="https://github.com/user-attachments/assets/abd9094a-6bcf-45d5-9076-786f42553ca9" />
+
+*The previews show the initial year. Use the year selector, zoom controls, and pop-ups in the interactive maps above.*
 
 ## How Active Bypassing is measured
 
 The measure uses a **revealed behavioral benchmark**, not a mechanically assigned nearest hospital. For every MedStat region *r*, year *t*, and detailed SPLG category *g*, it identifies the shortest observed travel time among patients who reside and are admitted in the same canton:
 
-\[
+$$
 m_{rtg}=\min_{j:R_j=r,\,T_j=t,\,G_j=g,\,H_j=K_j}d_j
-\]
+$$
 
 A patient *i* is an Active Bypasser when the patient is admitted outside the home canton and either no in-canton pathway is observed for the relevant cell or the realized journey is longer than the revealed in-canton benchmark:
 
-\[
-B_i=\mathbb{1}(H_i\ne K_i)\cdot\mathbb{1}[m_{R_iT_iG_i}\text{ is missing}\;\lor\;d_i>m_{R_iT_iG_i}]
-\]
+$$
+B_i=\mathbb{1}(H_i\ne K_i)\cdot\mathbb{1}\left[m_{R_iT_iG_i}\text{ is missing}\;\lor\;d_i>m_{R_iT_iG_i}\right]
+$$
 
 ```mermaid
 flowchart LR
