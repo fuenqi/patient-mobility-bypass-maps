@@ -21,7 +21,7 @@ All previews show **2023**. Use the interactive maps above to select other years
 
 #### GR26 selected (2023)
 
-This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were classified as Active Bypassing in 2023. For BP and Non-BP, the pop-up reports the number of Active Bypass patients and the bypass rate within that group (i.e., among all patients in the same group). The pop-up also reports the associated travel times.
+This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were classified as Active Bypassing in 2023. Among GR26’s elective **BP** cases, **7** were Active Bypass patients (**6.4%**; approximately **109 BP cases** overall), with a mean travel time of **215.9 minutes**. Among **Non-BP** cases, **325** were Active Bypass patients (**61.6%**; approximately **528 Non-BP cases** overall), with a mean travel time of **86.8 minutes**.
 
 <img width="960" alt="Elective admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d28bcdb-d709-4597-9b41-b8eb44aaaec7" />
 
@@ -33,7 +33,7 @@ This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were 
 
 #### GR26 selected (2023)
 
-This example shows that **123 of 419 urgent admissions (29.4%)** in GR26 were classified as Active Bypassing in 2023. For BP and Non-BP, the pop-up reports the number of Active Bypass patients and the bypass rate within that group (i.e., among all patients in the same group). The pop-up also reports the associated travel times.
+This example shows that **123 of 419 urgent admissions (29.4%)** in GR26 were classified as Active Bypassing in 2023. Among GR26’s urgent **BP** cases, **6** were Active Bypass patients (**2.3%**; approximately **261 BP cases** overall), with a mean travel time of **195.4 minutes**. Among **Non-BP** cases, **117** were Active Bypass patients (**71.8%**; approximately **163 Non-BP cases** overall), with a mean travel time of **65.3 minutes**.
 
 <img width="960" alt="Urgent admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d99be6c-7d62-4513-a404-d3fddf27c368" />
 
