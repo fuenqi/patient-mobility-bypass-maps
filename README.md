@@ -21,6 +21,8 @@ All previews show **2023**. Use the interactive maps above to select other years
 
 #### GR26 selected (2023)
 
+This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were classified as Active Bypassing in 2023. The pop-up also decomposes these cases by BP/Non-BP scope and reports the associated travel times.
+
 <img width="960" alt="Elective admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d28bcdb-d709-4597-9b41-b8eb44aaaec7" />
 
 ### Urgent admissions
@@ -30,6 +32,8 @@ All previews show **2023**. Use the interactive maps above to select other years
 <img width="960" alt="Urgent admissions: full bypassing map for 2023" src="https://github.com/user-attachments/assets/9b4735d6-ac93-4e15-9b09-4b3ddbce496f" />
 
 #### GR26 selected (2023)
+
+This example shows that **123 of 419 urgent admissions (29.4%)** in GR26 were classified as Active Bypassing in 2023. The pop-up also reports the BP/Non-BP composition and travel-time summaries for bypassing patients.
 
 <img width="960" alt="Urgent admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d99be6c-7d62-4513-a404-d3fddf27c368" />
 
