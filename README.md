@@ -43,6 +43,8 @@ This example shows that **123 of 419 urgent admissions (29.4%)** in GR26 were cl
 
 ## Method: a revealed-choice benchmark
 
+The bypassing measure captures patients’ realized choice behaviour. It is shaped by the observed availability and configuration of hospital services, but it is not a direct measure of local hospital supply.
+
 The measure is not based on an external hospital directory or a purely geographic nearest-hospital rule. For each **MedStat region × year × detailed SPLG group**, it uses the observed in-canton choices of comparable patients to reveal the contemporaneously feasible in-canton pathway.
 
 Walk-in/self-referral observations remain in the comparison set when this benchmark is constructed. The elective/urgent distinction is applied for reporting and map presentation; supply is defined at the hospital–SPLG level rather than by admission channel.
