@@ -21,7 +21,7 @@ All previews show **2023**. Use the interactive maps above to select other years
 
 #### GR26 selected (2023)
 
-This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were classified as Active Bypassing in 2023. For each BP/Non-BP line, the number is the count of Active Bypass patients and the percentage is the **within-scope bypass rate** (Active Bypass patients divided by all patients in that scope), not that scope's share of the 332 cases. The pop-up also reports the associated travel times.
+This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were classified as Active Bypassing in 2023. For BP and Non-BP, the pop-up reports the number of Active Bypass patients and the bypass rate within that group (i.e., among all patients in the same group). The pop-up also reports the associated travel times.
 
 <img width="960" alt="Elective admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d28bcdb-d709-4597-9b41-b8eb44aaaec7" />
 
@@ -33,7 +33,7 @@ This example shows that **332 of 638 elective admissions (52.0%)** in GR26 were 
 
 #### GR26 selected (2023)
 
-This example shows that **123 of 419 urgent admissions (29.4%)** in GR26 were classified as Active Bypassing in 2023. For each BP/Non-BP line, the number is the count of Active Bypass patients and the percentage is the **within-scope bypass rate** (Active Bypass patients divided by all patients in that scope), not that scope's share of the 123 cases. The pop-up also reports the associated travel times.
+This example shows that **123 of 419 urgent admissions (29.4%)** in GR26 were classified as Active Bypassing in 2023. For BP and Non-BP, the pop-up reports the number of Active Bypass patients and the bypass rate within that group (i.e., among all patients in the same group). The pop-up also reports the associated travel times.
 
 <img width="960" alt="Urgent admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d99be6c-7d62-4513-a404-d3fddf27c368" />
 
