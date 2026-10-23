@@ -11,58 +11,76 @@ Interactive maps and methodological documentation for a revealed-choice measure 
 
 ## Map previews
 
-### Urgent admissions
-
-<img width="960" alt="Urgent-admissions bypassing map preview" src="https://github.com/user-attachments/assets/f62c8f19-fb6e-486a-9038-9c11ac770eba" />
+All previews show **2023**. Use the interactive maps above to select other years, zoom, and inspect MedStat-region pop-ups.
 
 ### Elective admissions
 
-<img width="960" alt="Elective-admissions bypassing map preview" src="https://github.com/user-attachments/assets/abd9094a-6bcf-45d5-9076-786f42553ca9" />
+#### Full map (2023)
 
-*The previews show the initial year. Use the year selector, zoom controls, and pop-ups in the interactive maps above.*
+<img width="960" alt="Elective admissions: full bypassing map for 2023" src="https://github.com/user-attachments/assets/e79e4992-e2a5-4177-951b-8666501a5fe1" />
 
-## How Active Bypassing is measured
+#### GR26 selected (2023)
 
-The measure uses a **revealed behavioral benchmark**, not a mechanically assigned nearest hospital. For every MedStat region *r*, year *t*, and detailed SPLG category *g*, it identifies the shortest observed travel time among patients who reside and are admitted in the same canton:
+<img width="960" alt="Elective admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d28bcdb-d709-4597-9b41-b8eb44aaaec7" />
+
+### Urgent admissions
+
+#### Full map (2023)
+
+<img width="960" alt="Urgent admissions: full bypassing map for 2023" src="https://github.com/user-attachments/assets/9b4735d6-ac93-4e15-9b09-4b3ddbce496f" />
+
+#### GR26 selected (2023)
+
+<img width="960" alt="Urgent admissions: GR26 popup for 2023" src="https://github.com/user-attachments/assets/9d99be6c-7d62-4513-a404-d3fddf27c368" />
+
+## Method: a revealed-choice benchmark
+
+The measure is not based on an external hospital directory or a purely geographic nearest-hospital rule. For each **MedStat region × year × detailed SPLG group**, it uses the observed in-canton choices of comparable patients to reveal the contemporaneously feasible in-canton pathway.
+
+Walk-in/self-referral observations remain in the comparison set when this benchmark is constructed. The elective/urgent distinction is applied for reporting and map presentation; supply is defined at the hospital–SPLG level rather than by admission channel.
+
+For region \(r\), year \(t\), and detailed SPLG group \(g\), let \(d_j\) denote the realized travel time of patient \(j\), \(H_j\) the treating-hospital canton, and \(K_j\) the home canton. The revealed in-canton benchmark is:
 
 $$
-m_{rtg}=\min_{j:R_j=r,\,T_j=t,\,G_j=g,\,H_j=K_j}d_j
+m_{rtg}=\min_{j:R_j=r,\,T_j=t,\,G_j=g,\,H_j=K_j} d_j.
 $$
 
-A patient *i* is an Active Bypasser when the patient is admitted outside the home canton and either no in-canton pathway is observed for the relevant cell or the realized journey is longer than the revealed in-canton benchmark:
+A patient \(i\) is classified as an Active Bypasser when the admission is outside the home canton and either no in-canton pathway is observed for the relevant cell or the realized journey is strictly longer than the revealed benchmark:
 
 $$
-B_i=\mathbb{1}(H_i\ne K_i)\cdot\mathbb{1}\left[m_{R_iT_iG_i}\text{ is missing}\;\lor\;d_i>m_{R_iT_iG_i}\right]
+B_i=\mathbb{1}(H_i\ne K_i)\cdot\mathbb{1}\left[m_{R_iT_iG_i}\text{ is missing }\;\lor\; d_i>m_{R_iT_iG_i}\right].
 $$
 
 ```mermaid
-flowchart LR
-    A[All eligible admissions<br/>including walk-in cases] --> B[MedStat region × year × SPLG]
-    B --> C[Shortest observed in-canton travel time]
-    C --> D{Out-of-canton admission?}
-    D -->|No| E[Non-bypassing]
-    D -->|Yes| F{No observed in-canton path<br/>or longer travel time?}
-    F -->|No| E
-    F -->|Yes| G[Active Bypassing]
-    E --> H[Aggregate by region, year, and admission group]
-    G --> H
-    H --> I[Interactive maps]
+flowchart TD
+    A[Patient admission i] --> B{Same canton?}
+    B -- Yes --> N[Not an Active Bypasser]
+    B -- No --> C[Match MedStat region, year, and detailed SPLG]
+    C --> D{Observed in-canton reference pathway?}
+    D -- No --> E[Active Bypasser]
+    D -- Yes --> F{Realized time > revealed in-canton minimum?}
+    F -- Yes --> E
+    F -- No --> N
 ```
 
-The reference benchmark includes all eligible admissions, including self-referral and walk-in cases. Self-referral cases are excluded only from the final urgent-admission analysis sample. Classification is performed at the detailed SPLG level; Basic Package (BP) and Non-BP categories are reporting aggregates in the maps.
+The maps aggregate the resulting indicator by MedStat region and year:
 
-## Data availability
+$$
+\text{Bypass Rate}_{rt}=\frac{\sum_{i\in(r,t)} B_i}{\#\{i\in(r,t)\}}.
+$$
 
-The underlying BFS hospital microdata are confidential and are not distributed with this repository. This repository contains only interactive maps based on region-year aggregates, a simplified map-rendering template, and methodological documentation. It contains no patient-level records, source data, Excel workbooks, or intermediate analysis files.
+BP and Non-BP values shown in a pop-up are communication summaries only; the underlying comparison is made at detailed SPLG level.
 
 ## Repository contents
 
-| Location | Contents |
-| --- | --- |
-| `docs/` | Interactive Leaflet maps and the GitHub Pages entry page |
-| `code/` | Simplified, path-free template showing map rendering logic |
-| `data/README.md` | Data-access and confidentiality statement |
+- docs/ — two self-contained interactive Leaflet maps and the GitHub Pages entry point.
+- code/render_leaflet_maps.R — a path-free illustrative rendering template; it does not expose data locations or data-processing entry points.
+- data/README.md — data-access and confidentiality statement.
+
+## Data availability and confidentiality
+
+No patient-level data, hospital-level source data, Excel workbooks, geographic source layers, access credentials, or restricted data paths are included in this repository. The interactive maps contain only published visual outputs and aggregated regional statistics. Reproduction using the underlying data requires the appropriate authorized data access.
 
 ## Citation
 
-Please cite the repository version or release used in your work. A DOI will be added after the first archived release.
+Please cite the associated paper and this repository's GitHub Pages maps when referring to the interactive visualizations.
