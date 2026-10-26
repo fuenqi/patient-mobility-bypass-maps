@@ -76,7 +76,7 @@ flowchart TD
 The maps aggregate the resulting indicator by MedStat region and year:
 
 $$
-\text{Bypass Rate}_{rt}=\frac{\sum_{i\in(r,t)} B_i}{N_{rt}},\qquad N_{rt}=\left|\{i\in(r,t)\}\right|.
+\text{Bypass Rate}_{ry}=\frac{\sum_{i\in(r,y)} B_i}{N_{ry}},\qquad N_{ry}=\left|\{i\in(r,y)\}\right|.
 $$
 
 BP and Non-BP values shown in a pop-up are communication summaries only; the underlying comparison is made at detailed SPLG level.
