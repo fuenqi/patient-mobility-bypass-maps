@@ -45,9 +45,9 @@ This example shows that **123 of 419 urgent admissions (29.4%)** in GR26 were cl
 
 The bypassing measure captures patients’ realized choice behaviour. It is shaped by the observed availability and configuration of hospital services, but it is not a direct measure of local hospital supply.
 
-The measure is not based on an external hospital directory or a purely geographic nearest-hospital rule. For each **MedStat region × year × detailed SPLG group**, it uses the observed in-canton choices of comparable patients to reveal the contemporaneously feasible in-canton pathway.
+The measure is not based on an external hospital directory or a purely geographic nearest-hospital rule. For each **MedStat region × year × detailed SPLG group**, it uses the observed in-canton choices of comparable patients to construct a revealed in-canton benchmark from pathways actually used by admissions in the same MedStat region, year and detailed SPLG group.
 
-Walk-in/self-referral observations remain in the comparison set when this benchmark is constructed. The elective/urgent distinction is applied for reporting and map presentation; supply is defined at the hospital–SPLG level rather than by admission channel.
+Walk-in/self-referral observations remain in the comparison set when this benchmark is constructed. The elective/urgent distinction is applied for reporting and map presentation. The benchmark pools admission channels within each MedStat–year–SPLG cell. Elective and urgent rates are then calculated within their respective analysis samples. Walk-in/self-referral admissions are retained for benchmark construction and excluded only from the final urgent analysis sample.
 
 For region \(r\), year \(t\), and detailed SPLG group \(g\), let \(d_j\) denote the realized travel time of patient \(j\), \(H_j\) the treating-hospital canton, and \(K_j\) the home canton. The revealed in-canton benchmark is:
 
@@ -76,7 +76,7 @@ flowchart TD
 The maps aggregate the resulting indicator by MedStat region and year:
 
 $$
-\text{Bypass Rate}_{ry}=\frac{\sum_{i\in(r,y)} B_i}{N_{ry}},\qquad N_{ry}=\left|\{i\in(r,y)\}\right|.
+\text{Bypass Rate}_{rt}=\frac{\sum_{i\in(r,t)} B_i}{N_{rt}},\qquad N_{rt}=\left|\{i\in(r,t)\}\right|.
 $$
 
 BP and Non-BP values shown in a pop-up are communication summaries only; the underlying comparison is made at detailed SPLG level.
